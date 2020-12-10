@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Safebook</title>
+  <meta name="description" content="Page for sharing inspiration for home decoration" 
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-light fixed-top container  d-flex flex-column pt-0">
+
+    <div class="justify-content-between w-100 d-flex pt-3">
+
+
+      <form class="form-inline">
+        <div class="d-none d-md-block mr-2">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+
+        </div>
+
+        <div>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Se arch">
+
+
+        </div>
+
+
+      </form>
+
+      <ul class="navbar-nav text-center">
+        <li class="nav-item active">
+          <a class="nav-link mr-4" href="#">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chat-left" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
+              <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="row w-100">
+      <div class="col-12 d-flex flex-column ">
+        <button class="btn d-md-none mx-auto" data-toggle="collapse" data-target="#collapsible"> 
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg></button>
+
+        <div class="collapse in d-md-block" id="collapsible">
+
+          <div class=" d-flex flex-column mt-4 ">
+            <h4 class="text-muted mb-3 mr-3 mr-md-0">Recent</h4>
+            <div class="d-flex flex-md-column">
+              <div class="custom-control custom-radio toggle">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">24 hour</label>
+              </div>
+              <div class="custom-control custom-radio toggle">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">1 week</label>
+              </div>
+              <div class="custom-control custom-radio toggle">
+                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio3">1 year</label>
+              </div>
+              <div class="custom-control custom-radio toggle">
+                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" checked="checked">
+                <label class="custom-control-label active" for="customRadio4">All time</label>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="d-flex flex-column mt-4 ">
+            <h4 class="text-muted mb-3 mr-3 mr-md-0">Filter</h4>
+            <div class="d-flex flex-md-column ">
+              <span style="min-width:4rem;">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label class="ml-1">Ads</label>
+              </span>
+
+              <span style="min-width:8rem;">
+                <label class="switch ml-5 ml-md-0">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label class="ml-1">Location based</label>
+              </span>
+
+              <span style="min-width:8rem;">
+                <label class="switch ml-5 ml-md-0">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label class="ml-1">Cookie tracking</label>
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </nav>
+
+
+  <div class="container">
+
+    <article class="col-12 col-lg-6 card mx-auto border-0 p-0 mt-5">
+      <img src="https://ksassets.timeincuk.net/wp/uploads/sites/56/2020/11/Snug-sofa-in-a-box-920x736.jpg"
+        class="w-100 p-0 pb-2" alt="Safebook">
+      <div class="d-flex mx-auto">
+        <button type="button" class="btn tag living mx-1">Living room</button> <button type="button"
+          class="btn tag custom mx-1">Couch</button>
+      </div>
+
+      <hr class="mx-auto">
+
+      <p class="px-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, sed repellendus? Provident aliquid eos voluptatum
+        quam veniam veritatis ut nam.
+      </p>
+
+      <hr class="mx-auto">
+
+      <div class="px-5 d-flex py-2 justify-content-between mb-2">
+        <h5 class="m-0 btn pl-0">@Kiwi_blossom</h5>
+        <div>
+
+          <span class="p-1 rounded btn">
+            <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-chat" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+            </svg>
+            25
+          </span>
+
+          <span class="p-1 rounded btn">
+            <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-heart" fill="red"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+            45
+          </span>
+
+          <span class="p-1 rounded btn">
+            <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
+            </svg>
+            </i>
+        </div>
+
+      </div>
+
+
+    </article>
+
+    <article class="col-12 col-lg-6  card mx-auto border-0 p-0 mt-5">
+      <img
+        src="https://homedecorbliss.com/wp-content/uploads/2019/12/51-Industrial-Bedroom-Ideas-Picture-Inspiration-and-Tips.jpg"
+        class="w-100 p-0 pb-2" alt="Safebook">
+      <div class="d-flex mx-auto">
+        <button type="button" class="btn tag living mx-1">Living room</button>
+        <button type="button" class="btn tag bed mx-1">Bedroom</button>
+        <button type="button" class="btn tag custom mx-1">Storage</button>
+      </div>
+
+      <hr class="mx-auto">
+
+      <p class="px-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, sed repellendus? Provident aliquid eos voluptatum
+        quam veniam veritatis ut nam.
+      </p>
+
+      <hr class="mx-auto">
+
+      <div class="px-5 d-flex py-2 justify-content-between mb-2">
+        <h5 class="m-0 btn pl-0">@Hero</h5>
+        <div>
+
+          <span class="p-1 rounded btn">
+            <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-chat" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+            </svg>
+            623
+          </span>
+
+          <span class="p-1 rounded btn">
+            <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-heart" fill="red"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+            2k
+          </span>
+
+          <span class="p-1 rounded btn">
+            <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
+            </svg>
+            </i>
+        </div>
+
+      </div>
+
+
+    </article>
+
+
+    <article class="col-12 col-lg-6  card mx-auto border-0 p-0 mt-5">
+      <img
+        src="https://www.ikea.com/images/a-kitchen-in-dark-green-with-a-kitchen-island-black-bar-stoo-70e37be41734ba240af5416999fc70c7.jpg"
+        class="w-100 p-0 pb-2" alt="Safebook">
+      <div class="d-flex mx-auto">
+        <button type="button" class="btn tag kitchen mx-1">Kitchen</button>
+      </div>
+
+      <hr class="mx-auto">
+
+      <p class="px-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, sed repellendus? Provident aliquid eos voluptatum
+        quam veniam veritatis ut nam.
+      </p>
+
+      <hr class="mx-auto">
+
+      <div class="px-5 d-flex py-2 justify-content-between mb-2">
+        <h5 class="m-0 btn pl-0">@Redflower</h5>
+        <div>
+
+          <span class="p-1 rounded btn">
+            <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-chat" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+            </svg>
+            0
+          </span>
+
+          <span class="p-1 rounded btn">
+            <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+            2
+          </span>
+
+          <span class="p-1 rounded btn">
+            <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-arrow-90deg-right" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
+            </svg>
+            </i>
+        </div>
+
+      </div>
+
+
+    </article>
+
+
+  </div>
+
+
+  <footer class="page-footer font-small fixed-bottom">
+
+    <div class="footer-copyright text-md-right  text-center py-md-3 px-3 text-muted font-weight-light"
+      style="font-size: 0.7em;">
+      <a href="mailto:info@safebook.se">info@safebook.se</a>
+      © 2020 Copyright safebook.se
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
