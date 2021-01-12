@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>DesignInspo</title>
-  <meta name="description" content="Page for sharing inspiration for home decoration" >
+  <title>Safebook</title>
+  <meta name="description" content="Page for sharing inspiration for home decoration">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -14,15 +15,44 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
   </script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
+
 <body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginlabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginlabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="inputuser">Username</label>
+            <input type="email" class="form-control" id="inputuser" aria-describedby="userhelp" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="inputpassword">Password</label>
+            <input type="password" class="form-control" id="inputpassword" placeholder="Password">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="login()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar navbar-expand navbar-light fixed-top container  d-flex flex-column pt-0">
 
     <div class="justify-content-between w-100 d-flex pt-3">
-
 
       <form class="form-inline">
         <div class="d-none d-md-block mr-2">
@@ -39,14 +69,18 @@
         <div>
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Se arch">
 
-
         </div>
 
 
       </form>
 
       <ul class="navbar-nav text-center">
-        <li class="nav-item active">
+        <li class="nav-item active" id="login_button">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
+          </a>
+        </li>
+
+        <li class="nav-item active d-none" id="feed_button">
           <a class="nav-link mr-4" href="#">
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chat-left" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
@@ -56,24 +90,32 @@
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item d-none" id="settings_button">
           <a class="nav-link" href="#">
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
-              <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
+              <path fill-rule="evenodd"
+                d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z" />
             </svg>
           </a>
         </li>
+
       </ul>
+
+
 
     </div>
 
     <div class="row w-100">
       <div class="col-12 d-flex flex-column ">
-        <button class="btn d-md-none mx-auto" data-toggle="collapse" data-target="#collapsible"> 
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg></button>
+        <button class="btn d-md-none mx-auto" data-toggle="collapse" data-target="#collapsible">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg></button>
 
         <div class="collapse in d-md-block" id="collapsible">
 
@@ -148,7 +190,7 @@
 
     <article class="col-12 col-lg-6 card mx-auto border-0 p-0 mt-5">
       <img src="https://ksassets.timeincuk.net/wp/uploads/sites/56/2020/11/Snug-sofa-in-a-box-920x736.jpg"
-        class="w-100 p-0 pb-2" alt="DesignInspo">
+        class="w-100 p-0 pb-2" alt="Safebook">
       <div class="d-flex mx-auto">
         <button type="button" class="btn tag living mx-1">Living room</button> <button type="button"
           class="btn tag custom mx-1">Couch</button>
@@ -202,7 +244,7 @@
     <article class="col-12 col-lg-6  card mx-auto border-0 p-0 mt-5">
       <img
         src="https://homedecorbliss.com/wp-content/uploads/2019/12/51-Industrial-Bedroom-Ideas-Picture-Inspiration-and-Tips.jpg"
-        class="w-100 p-0 pb-2" alt="DesignInspo">
+        class="w-100 p-0 pb-2" alt="Safebook">
       <div class="d-flex mx-auto">
         <button type="button" class="btn tag living mx-1">Living room</button>
         <button type="button" class="btn tag bed mx-1">Bedroom</button>
@@ -258,7 +300,7 @@
     <article class="col-12 col-lg-6  card mx-auto border-0 p-0 mt-5">
       <img
         src="https://www.ikea.com/images/a-kitchen-in-dark-green-with-a-kitchen-island-black-bar-stoo-70e37be41734ba240af5416999fc70c7.jpg"
-        class="w-100 p-0 pb-2" alt="DesignInspo">
+        class="w-100 p-0 pb-2" alt="Safebook">
       <div class="d-flex mx-auto">
         <button type="button" class="btn tag kitchen mx-1">Kitchen</button>
       </div>
@@ -314,15 +356,24 @@
 
   <footer class="page-footer font-small fixed-bottom">
 
+    <div class="text-md-right text-center py-md-3 px-3 text-muted d-none" id="userinfo">
+      <label id="labeluser"></label>
+      <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+    </div>
+
     <div class="footer-copyright text-md-right  text-center py-md-3 px-3 text-muted font-weight-light"
       style="font-size: 0.7em;">
-      <a href="mailto:info@DesignInspo.se">info@DesignInspo.se</a>
-      © 2020 Copyright DesignInspo.se
+
+      <a href="mailto:info@safebook.se">info@safebook.se</a>
+      © 2020 Copyright safebook.se
 
     </div>
 
   </footer>
 
+
+
+  <script src="js/script.js"></script>
 
 </body>
 

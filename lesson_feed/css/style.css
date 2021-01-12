@@ -1,4 +1,13 @@
 
+
+.login_popup{
+  z-index: 1500;
+  background-color:#f1f1f1;
+}
+
+
+
+
 body{
     color: rgb(65, 65, 65);
     background-color: rgb(239 233 230);
@@ -74,6 +83,7 @@ article  i{
   }
 
 
+/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -81,14 +91,14 @@ article  i{
     height: 21px;
   }
   
-
+  /* Hide default HTML checkbox */
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
   
-
+  /* The slider */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -127,7 +137,7 @@ article  i{
     transform: translateX(15px);
   }
   
-
+  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
