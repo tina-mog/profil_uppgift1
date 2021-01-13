@@ -6,7 +6,13 @@
 }
 
 
+footer{
+  pointer-events: none;
+}
 
+.clickble{
+  pointer-events: all;
+}
 
 body{
     color: rgb(65, 65, 65);
@@ -15,6 +21,7 @@ body{
 
 nav {
     background-color: transparent; 
+    pointer-events: none;
 }
 
 
@@ -156,6 +163,7 @@ article  i{
   @media all and (max-width: 768px) {
     nav {
         background-color: rgb(239 233 230) !important; 
+        pointer-events: all;
     }
 
 }

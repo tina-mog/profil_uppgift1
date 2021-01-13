@@ -45,3 +45,9 @@ function logout() {
         document.querySelector("#labeluser").innerHTML = "";
 
 }
+
+
+
+function like(event){
+    event.target.setAttribute("fill", "red")
+}
