@@ -20,11 +20,11 @@ nav>.navbar-brand {
     color: #4a4a4a;
 }
 
-.dropdown{
+.dropdown {
     display: inline-block;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: rgb(243, 237, 233);
     border: none;
     font-size: 0.7em;
@@ -33,13 +33,13 @@ nav>.navbar-brand {
     padding-right: 1rem;
 }
 
-.dropdown-item{
+.dropdown-item {
     border-top: 1px solid #4a4a4a;
     margin-top: 2px;
     padding-top: 1rem;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     border-top: 3px solid #4a4a4a;
     margin-top: 0px;
     background-color: rgb(243, 237, 233);
@@ -57,15 +57,16 @@ nav button {
     margin-top: 2px;
 }
 
-nav form{
+nav form {
     display: inline;
 }
 
 
 
 nav button:focus {
-    outline:0;
+    outline: 0;
 }
+
 nav button:active {
     border-top: 3px solid #4a4a4a;
     margin-top: 0px;
@@ -95,14 +96,15 @@ h5 {
 }
 
 
-h1{
+h1 {
     font-weight: 700;
 }
+
 .section-1-bg {
     position: absolute;
-    background-color: rgb(213,213,213);
+    background-color: rgb(213, 213, 213);
     height: 25rem;
-    width: 40%;
+    width: 50vw;
     z-index: -2;
 }
 
@@ -110,56 +112,36 @@ h1{
     position: absolute;
     background-color: #F3EDE9;
     height: 16rem;
-    width: 55%; 
-    left: 40%;
+    width: 55%;
+    left: 45%;
     margin-top: 2rem;
     z-index: -1;
 }
 
-.section-2{
+.section-2 {
     background-color: #F3EDE9;
-    
+
 }
 
-.section-3-bg {
-    position: absolute;
-    background-color: rgb(213,213,213);
-    height: 25rem;
-    width: 45%;
-    z-index: -2;
-}
+.section-3 {}
 
-.section-3-bg-over {
-    position: absolute;
-    background-color: #F3EDE9;
-    height: 25rem;
-    width: 85%; 
-    left: 10%;
-    margin-top: 8rem;
-    z-index: -1;
-}
-
-.section-3{
-    
-}
-
-.section-3 img{
+.section-3 img {
     width: 100%;
-    
+
 }
 
 
-video{
+iframe {
     width: 100%;
-    
+
 }
 
-.section-3 .line{
-border-top: 3px solid black;
-position: relative;
+.section-3 .line {
+    border-top: 3px solid black;
+    position: relative;
 }
 
-.section-3 .dot{
+.section-3 .dot {
     position: absolute;
     left: 0;
     top: -12px;
@@ -171,36 +153,113 @@ position: relative;
 
 .section-5-bg {
     position: absolute;
-    background-color: rgb(213,213,213);
+    background-color: rgb(213, 213, 213);
     height: 25rem;
     width: 45%;
     z-index: -2;
 }
 
-.section-5-bg-over {
-    position: absolute;
-    background-color: #F3EDE9;
-    height: 30rem;
-    width: 85%; 
-    left: 10%;
-    margin-top: 8rem;
-    z-index: -1;
-}
 
-.section-6-bg {
+.section_contact_bg {
     position: absolute;
-    background-color: rgb(213,213,213);
-    height: 25rem;
+    background-color: rgb(213, 213, 213);
+    height: 10rem;
     width: 45%;
     z-index: -2;
 }
 
-.section-6-bg-over {
+
+.section_contact_bg_over {
     position: absolute;
     background-color: #F3EDE9;
-    height: 20rem;
-    width: 85%; 
-    left: 10%;
+    height: 15rem;
+    width: 40%;
+    left: 5%;
+    margin-top: 6rem;
+    z-index: -1;
+}
+
+
+.contact {}
+
+.contact textarea {
+    height: 7rem;
+}
+
+.contact button {
+    width: 9rem;
+    height: 3rem;
+    color: #4a4a4a;
+    font-size: 0.7em;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    border-top: 1px solid #4a4a4a;
+    margin-top: 2px;
+}
+
+.contact button:focus {
+    outline: 0;
+}
+
+.contact button:active {
+    border-top: 3px solid #4a4a4a;
+    margin-top: 0px;
+}
+
+.contact button:hover {
+    border-top: 3px solid #4a4a4a;
+    margin-top: 0px;
+}
+
+.gallery {}
+
+.gallery a {
+    width: 12rem;
+}
+
+.section-gallery {
+    position: absolute;
+    background-color: #F3EDE9;
+    height: 80rem;
+    width: 85%;
+    left: 5vw;
     margin-top: 8rem;
     z-index: -1;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .navbar-brand{
+        width: 100vw !important;
+    }
+
+    .gallery a {
+        width: 6rem;
+    }
+    .meny{
+        width: 100vw !important; 
+    }
+
+    .section-gallery {
+        position: absolute;
+        background-color: #F3EDE9;
+        height: 60rem;
+        width: 85%;
+        left: 10%;
+        margin-top: 8rem;
+        z-index: -1;
+    }
+
+    .section_contact_bg {
+    
+        width: 50%;
+        left: 10%;
+        
+    }    
+
+    .section_contact_bg_over {
+        width: 90%;
+    }
 }
